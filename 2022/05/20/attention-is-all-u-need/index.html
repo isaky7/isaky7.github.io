@@ -173,17 +173,17 @@
             
             <span class="tag">
                 
-                <a href="/tags/Batch-Normalization/" style="color: #03a9f4">Batch-Normalization</a>
+                <a href="/tags/Batch-Normalization/" style="color: #00bcd4">Batch-Normalization</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Layer-Normalization/" style="color: #00a596">Layer-Normalization</a>
+                <a href="/tags/Layer-Normalization/" style="color: #00bcd4">Layer-Normalization</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Transformer/" style="color: #ffa2c4">Transformer</a>
+                <a href="/tags/Transformer/" style="color: #ff7d73">Transformer</a>
             </span>
             
         </span>
@@ -191,7 +191,16 @@
     </div>
     
     <div class="content" v-pre>
-        <p>#Batch Normalization<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;<strong>Batch Normalization</strong>是google团队在2015年所写**<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1502.03167.pdf/">《Batch Normalization:Accelerating Deep Network Training by Reducing Internal Concariate Shift》</a>**<br><strong>目的</strong>：加速网络收敛并提升准确率  <span id="more"></span><br><strong>原理</strong>：如下图：<br><img src="https://img-blog.csdnimg.cn/20200221211618570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTQxMDk3,size_16,color_FFFFFF,t_70"><br>在图像预处理时会进行标准化<font color="red">（其目的是为了加速网络的收敛)</font>，而处理过后输入给Conv1的将会是满足某一分布的特征矩阵，但是输入Conv2的feature map就不一定满足<u>某一分布规律</u><font color="red">（整个训练样本集的feature map所要满足的分布规律）</font> <strong>但是</strong> <em><strong>BN</strong></em>可以将这个feature map满足方差为1均值为0的分布规律。</p>
+        <h1>Batch Normalization</h1>
+**Batch Normalization**是google团队在2015年所写**[《Batch Normalization:Accelerating Deep Network Training by Reducing Internal Concariate Shift》](https://arxiv.org/pdf/1502.03167.pdf/)**  
+**目的**：加速网络收敛并提升准确率  <span id="more"></span>  
+**原理**：如下图：  
+<img src="https://img-blog.csdnimg.cn/20200221211618570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTQxMDk3,size_16,color_FFFFFF,t_70">  
+在图像预处理时会进行标准化<font color="red">（其目的是为了加速网络的收敛)</font>，而处理过后输入给Conv1的将会是满足某一分布的特征矩阵，但是输入Conv2的feature map就不一定满足<u>某一分布规律</u><font color="red">（整个训练样本集的feature map所要满足的分布规律）</font> **但是** ***BN***可以将这个feature map满足方差为1均值为0的分布规律。
+  
+
+
+
 
     </div>
     

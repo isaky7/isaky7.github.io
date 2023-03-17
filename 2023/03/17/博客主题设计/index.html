@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>关于博客的搭建 | Isaky&#39;s blog</title>
+        <title>Isaky&#39;s blog</title>
         <meta name="author" content="Isaky" />
         <meta name="description" content="welcome to my world!!" />
         <meta name="keywords" content="" />
@@ -155,7 +155,7 @@
 
                 <div class="article">
     <div>
-        <h1>关于博客的搭建</h1>
+        <h1></h1>
     </div>
     <div class="info">
         <span class="date">
@@ -169,11 +169,17 @@
     </div>
     
     <div class="content" v-pre>
-        <p>2022&#x2F;3&#x2F;17 22:43:46<br>[TOC]<br>#<strong>关于博客的搭建</strong><br>##前言<br>之前为了学习人工智能方便做笔记，而云服务器对于抠搜党来说还是不怎么划算，于是比较简单的通过hexo+github做出了简单的搭建。由于时间和各种因素并没有去美化和完善他，已经过了半年了，想乘着博客的搭建复习以下<code>markdown</code>和<code>html</code>一些知识。<span id="more"></span><br>##主题更换<br>emmm….本来想自己搭建的，但是一环扣一环，我先选择现成的主题来使用，在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes|Hexo</a>中找到喜欢的主题打开github根据教程clone主题，或者将主题下载到本地hexo主题文件夹中进行使用。  </p>
-<p>##个性化制作<br>在hexo的<code>config</code>中，site处更改作者名和博客标题，头像设置在avatar处添加  </p>
-<blockquote>
-<p>(<strong>空一格</strong>）(图片相对路径)  </p>
-</blockquote>
+        <p>tags: [markdown,html,博客搭建，主题]  </p>
+<h1>关于博客的搭建</h1>   
+<h2>前言</h2> 
+之前为了学习人工智能方便做笔记，而云服务器对于抠搜党来说还是不怎么划算，于是比较简单的通过hexo+github做出了简单的搭建。由于时间和各种因素并没有去美化和完善他，已经过了半年了，想乘着博客的搭建复习以下`markdown`和`html`一些知识。<span id="more"></span>  
+<h2>主题更换</h2>  
+emmm....本来想自己搭建的，但是一环扣一环，我先选择现成的主题来使用，在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes|Hexo</a>中找到喜欢的主题打开github根据教程clone主题，或者将主题下载到本地hexo主题文件夹中进行使用。  
+  
+<h2>个性化制作</h2>  
+在hexo的`config`中，site处更改作者名和博客标题，头像设置在avatar处添加  
+>(**空一格**）(图片相对路径)  
+
 <p>背景则是在background处如头像设置一致。<br>description修改类似于个性签名，为了格调更高，加上我的github链接（<s>虽然没啥东西</s>),在friendLinks中添加即可。<br>想更高级点用icon来替换链接，<br><strong>文章查询</strong>  </p>
 <ul>
 <li>将<code>config</code>7中的search改为true会实现文档标题查询。</li>
@@ -182,10 +188,16 @@
 <ul>
 <li>在 <code>Front-Matter</code> 里设置 pinned 作为置顶参数，越大越靠前，默认为 0</li>
 </ul>
-<p>###js特效<br>无所谓，我会ctrlc+v.<br>通过js添加流星背景，鼠标点击特性、鼠标指针特效。最后记住在layout.ejs的<head>中添加相应的js。<br>###问题<br>1.发现markdown删除线语法前后加<font color="red"><code>~~</code></font>没用，所以最后还是选择用前端的方法加<code>&lt;s&gt;&lt;/s&gt;</code>.<br>2.在部署完成后，使用   </p>
-<blockquote>
-<p>hexo clean<br>hexo g<br>hexo serve  &#x2F;&#x2F;用于启动本地端口</p>
-</blockquote>
+<h3>js特效</h3>  
+无所谓，我会ctrlc+v.
+通过js添加流星背景，鼠标点击特性、鼠标指针特效。最后记住在layout.ejs的<head>中添加相应的js。  
+<h3>问题</h3>  
+1.发现markdown删除线语法前后加<font color="red">`~~`</font>没用，所以最后还是选择用前端的方法加`<s></s>`.  
+2.在部署完成后，使用   
+>hexo clean  
+hexo g  
+>hexo serve  //用于启动本地端口
+
 <p>发现在本地服务器local上正常运行，但在github域名上没有改变，我觉得应该是没有更新到github上，查询发现应该使用  </p>
 <blockquote>
 <p>hexo g<br>hexo d  </p>
