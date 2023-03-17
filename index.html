@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Isaky&#39;s blog</title>
+        <meta name="author" content="Isaky" />
+        <meta name="description" content="welcome to my world!!" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/%5Bobject%20Object%5D" />
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.1.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存&ensp;浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <nav id="menu" ref="menu">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>ISAKY&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;ISAKY&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-image="/%5Bobject%20Object%5D"></div>
+    
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Isaky&#39;s blog</h1>
+                <h3></h3>
+                <h5>welcome to my world!!</h5>
+            </div>
+        </span>
+    </div>
+    
+</div>
+<div id="home-posts-wrap"  ref="homePostsWrap">
+    <div id="home-posts">
+        <div id="posts">
+            
+
+<div class="post">
+    <a href="/2022/05/25/ACL/">
+        <h2 class="post-title">ACL</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_56915683/article/details/116453980">CNSD链接</a><br>#GNN（图神经网络）</p>
+<p>#GCN（图卷积神经网络）<br>1.缺点：需要将整个图放入内存和显存，非常消耗。&amp;nbsp;2.在训练时需要知道整个图的结构信息（包括预测节点）。<br>2.跟cnn类似，多层，每层输入节点特征，将当前特征和网络结构图继续传到下层。<br>3.原理（核心计算公式）<br><img src="https://img-blog.csdnimg.cn/37d5a302ed274c6dbd164f4b1356370b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5rGf5Y2X57a_6Zuo,size_20,color_FFFFFF,t_70,g_se,x_16"><br>#知识图谱增强的aspect情感分析<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/414252384">相关知乎链接</a><br><strong>1.macro F1 score：</strong><code>（recall(r):召回率；precision（p）：精确率）</code><br>&amp;emsp;F1 score:用来评价<u><font color="orange">“二元</font></u>分类器的度量———&gt;而下面就是针对多元<br>&amp;emsp:针对每个类计算出精确率和召回率再求平均，然后按照F1-score公式计算</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/05/25/ACL/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/05/24/%E6%9D%8E%E5%AE%8F%E6%AF%85%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+        <h2 class="post-title">李宏毅学习笔记</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/24
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>#第一讲(课程简介）<br>1.Pre-trained Model（Foundation Model)-&gt;Bert<br>2.Generative Adversarial Network:只用收集大量x和大量Y,不需要他们成对关系，机器自动把他们关联起来<br>3.Reinforcement Learning(RL):不知道怎么定义标签（标注资料）但知道什么是好坏时<br>4.Anomaly Detection(异常检测）：让机器具备回答不知道的指令<br>5.Explainable AI<br>6.Domain Adaptation<br>7.NetWork Compressionf<br>##Function-机器学习<br>Regression:要找的函数的输出是一个数值这样的机器学习任务<br>Classification:让机器做选择题（要先准备好classes)<br>Structured Learning:让机器出结构<br><strong>找出函数的步骤</strong>：<br>1.写出一个带有未知参数的函数（待定系数）-&gt;这个function我们也可以叫做model（eg:y&#x3D;b+wx,b和w就是待定系数）<br>2.定义一个Loss(也是一个Function,输入的是前面待定的系数，输出的值是判断这个系数好与坏，（eg:输入（0.5k,1）-&gt;y&#x3D;0.5k+x）将式子带入过去的样本中，求出每次预测值与真实值之间的差（真实值叫做Label）,把所有误差相加取平均值&#x3D;L（LOSS），L越大输入的值就越不好)<br>(这种方法得到的L也叫做mean absolute error{MAE}，还可以通过标准差求得e叫做MSE)<br>3.Optimization(最优化问题):<br><font color="red">Gradient Descent</font>(eg:b一定时，w变化，L会取不同的值形成的wL坐标轴曲线就是error surface(误差曲面))：<br>&amp;emsp;1)随机决定一个W的初始值w<sub>0</sub><br>&amp;emsp;2)计算在w<sub></p>
+<blockquote>
+<p>超参数：训练前就定好或者在训练中人为改变的值  </p>
+</blockquote>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="color: #00a596">
+                机器学习
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/05/24/%E6%9D%8E%E5%AE%8F%E6%AF%85%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/05/23/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+        <h2 class="post-title">吴恩达深度学习笔记</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/23
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>在RGB图像中，把像素对应的亮度值写成一维的特征矩阵x（把r上所有值写完接着写g上的，以此类推）<br>在二分分类问题中目标就是训练一个分类器：以图片的特征向量x作为输入，预测输出结果标签为y是1还是0</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="color: #03a9f4">
+                学习笔记
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/05/23/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/05/22/BERT%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">
+        <h2 class="post-title">BERT模型学习</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/22
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>2022&#x2F;5&#x2F;23 12:34:44 </p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/05/22/BERT%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/05/20/%E5%9C%A8%E5%AD%A6%E4%B9%A0attention%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%B8%80%E4%BA%9B%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/">
+        <h2 class="post-title">在学习attention过程中一些专业名词</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/20
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/Augusdi/article/details/9020235?ops_request_misc=&request_id=&biz_id=102&utm_term=%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E4%B8%AD1%E5%92%8C-1%E8%8B%B1%E6%96%87&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-9020235.142^v10^pc_search_result_control_group,157^v4^control&spm=1018.2226.3001.4187" ><font color="red"><strong>首先保存一下各类常用英文词汇及解释</strong></font></a><br>ALSC:情感分类<br>**存档以后好看：ACL EMNLP **</p>
+<p>#CNN<br>图像、音频、文本处理（将数据转化为图像进行处理）<br>输入：二维像素阵列（图片）<br>通过<strong>CNN</strong>黑箱<br>输出：图片的意义<br>&amp;nbsp在输入过程如灰度图像，计算机接收到的是-1和1.（当两个图片有一定偏差时，计算机就能够通过识别图片的特征，而以下图为例<br><img src="/picture/hexo-Img/%E5%8D%B7%E7%A7%AF%E5%B1%82.png" alt=" "><br>三张图为x的不同形态，找到三张图的特征形成卷积核<br>##channel<br>&amp;nbsp;&amp;nbsp;对于输入层而言，channel代表图像的通道数量，当输入图像为RGB彩色图像，则channel &#x3D; 3；如果是灰度图像，则channel &#x3D; 1。<br>&amp;nbsp;&amp;nbsp;对于卷积核而言，卷积核的深度 &#x3D; 卷积核channel数<br>若当前卷积层的上一层为输入层，则channel数 &#x3D; 输入图像channel数无论输入图像的深度是多少，每经过一个卷积核都将变换为一个深度为1的特征图，一个卷积层之内可定义多个卷积核，当前卷积层上的各个卷积核会对上一层输入的每feature map（特征图）分别执行卷积操作，即每个卷积核都会对应生成一个新的特征图feature map(不同的卷积核所提取的特征不同)。故而在下一层需要多少个特征图，本层就需要定义多少个卷积核，即卷积核的深度与传出的特征图的张数一致。<br>##神经元、卷积和池化、softmax<br><strong>神经元</strong>：由一个线性函数和一个<u>非线性激活函数</u>（改变数据线性关系并将数据映射到某个范围内，防止过大溢出）构成.<br><strong>全连接</strong>：所有神经元都与下层神经元有关系。（缺点：计算量大）<br>*<em>填充（padding)*<em>：在卷积过程中，输入数据边缘不能利用到如（通过3</em>3的卷积核去进行卷积5*5的数据，输出结果为3</em>3），就用0去填充输入矩阵外轮廓（p&#x3D;k-1&#x2F;2). 填充完过后输出的矩阵就会变成和输入大小相同的矩阵（特征矩阵）。<br><strong>步长（Stride）</strong>：卷积过程中跳跃的距离，一般只移动一格但是不限。<br><strong>卷积</strong>：卷积核的生成方式一般是随机的或全为0又或者通过预训练的方式提取卷积核然后通过算法去纠正卷积核到底是什么。（假设输入图像为n<em>n,卷积核(过滤器）为f</em>f，填充p，步长s,则输出<font color="red"> <strong>O&#x3D;（n-f+2p)&#x2F;s+1</strong></font>)<br>在rgb图像中channel为3，可以通过多通道的过滤器（3<em>3</em>3）卷积完成后经过cnn输出与卷积过滤器（3<em>3</em>3）数量相同的过滤器（3<em>3</em>通道数）个数。<br><strong>池化</strong>：作用：降维。&amp;emsp;  1.最大池化：取当前卷积核中数字最大的一的数，形成新的卷积核。<br><strong>Dropout层</strong>:111<br><strong>softmax</strong>:<br><img src="https://img-blog.csdn.net/20180902220822202?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpdGNhcm1hbmxlZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"><br>假设有一个数组V， V i V_i Vi​表示V中的第i个元素，那么这个元素的softmax值为:<br><code>S i = e i ∑ j e j S_i = \frac&#123;e^i&#125;&#123;\sum_j e^j&#125; Si​=∑j​ejei</code>​  </p>
+<p>该元素的softmax值，就是该元素的指数与所有元素指数和的比值。<br>##卷积层（kilter)和过滤器(filter)<br><a target="_blank" rel="noopener" href="https://medlen.blog.csdn.net/article/details/109906338">对于卷积层（kernel）和过滤器(filter)的区别</a>  </p>
+<pre><code>卷积核就是由长和宽来指定的，是一个二维的概念。
+而过滤器是是由长、宽和深度指定的，是一个三维的概念。
+过滤器可以看做是卷积核的集合。
+过滤器比卷积核高一个维度——深度。  
+</code></pre>
+<p>##RELU(激活函数)<br>函数公式:<font color=red size="20px"><code>f(x)=max(0,x)</code></font>;<br><code>def rectified(x)</code><br><code>return max(0.0,x);</code><br>优点：1)克服梯度消失的问题&amp;emsp;2)加快训练速度<br>缺点：1）输入负数，则完全不激活，ReLU函数死掉。&amp;emsp;12）ReLU函数输出要么是0，要么是正数，也就是ReLU函数不是以0为中心的函数<br>1.ReLU不是线性函数，为负时输出为0，为正时输出本身，而相对于tanh这些来说它的好处是能够返回一个真正意义的0而不是说近似的(所以有时也在于他相似于线性但是非线性，当神经网络的行为是线性或接近线性时，它更容易优化 )<br>2.对 MLPs，CNNs 使用 ReLU，但不是 RNNs，还有使用Tanh的LTSM都不适合使用<br>3.tanh 和 sigmoid 激活函数需要使用指数计算，而relu只用max()<br>#Residual(残差网络)<br> <font color="red"><strong><code>y=F(x,w)+x</code></strong></font><br> ResNet通过shortcut connections结构使得后面很多层能够直接学习残差，减少了很多信息的损耗和丢失：<br>通过将很多信息绕道传给输出，保护信息完整性，使得整个网络只需要学习输入和输出差别的那一部分。<br>##parameter-free<br>一种无监督聚类算法<br><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Sarfraz_Efficient_Parameter-Free_Clustering_Using_First_Neighbor_Relations_CVPR_2019_paper.pdf">Efficient Parameter-free Clustering Using First Neighbor Relations​arxiv.org </a>   </p>
+<p>–  </p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="color: #ff7d73">
+                卷积层，过滤器
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/05/20/%E5%9C%A8%E5%AD%A6%E4%B9%A0attention%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%B8%80%E4%BA%9B%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/05/20/attention-is-all-u-need/">
+        <h2 class="post-title">Attention is all u need</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/20
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>#Batch Normalization<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;<strong>Batch Normalization</strong>是google团队在2015年所写**<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1502.03167.pdf/">《Batch Normalization:Accelerating Deep Network Training by Reducing Internal Concariate Shift》</a>**<br><strong>目的</strong>：加速网络收敛并提升准确率<br><strong>原理</strong>：如下图：<br><img src="https://img-blog.csdnimg.cn/20200221211618570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTQxMDk3,size_16,color_FFFFFF,t_70"><br>在图像预处理时会进行标准化<font color="red">（其目的是为了加速网络的收敛)</font>，而处理过后输入给Conv1的将会是满足某一分布的特征矩阵，但是输入Conv2的feature map就不一定满足<u>某一分布规律</u><font color="red">（整个训练样本集的feature map所要满足的分布规律）</font> <strong>但是</strong> <em><strong>BN</strong></em>可以将这个feature map满足方差为1均值为0的分布规律。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Batch-Normalization/" style="color: #ff7d73">
+                Batch-Normalization
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Layer-Normalization/" style="color: #ff7d73">
+                Layer-Normalization
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Transformer/" style="color: #00bcd4">
+                Transformer
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/05/20/attention-is-all-u-need/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2022/04/03/hello-world/">
+        <h2 class="post-title">Hello World</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/4/3
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2022/04/03/hello-world/" class="go-post">阅读全文</a>
+</div>
+
+
+            <div class="page-current">
+    <div class="prev">
+        
+    </div>
+    <div class="page-index">
+        
+        <span class="current">1</span>
+        
+    </div>
+    <div class="next">
+        
+    </div>
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="/%5Bobject%20Object%5D" alt="avatar" />
+        </div>
+        <div class="name">Isaky</div>
+        <div class="description">
+            <p>Description<br>…</p>
+
+        </div>
+        
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Isaky&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Isaky
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+    </body>
+</html>

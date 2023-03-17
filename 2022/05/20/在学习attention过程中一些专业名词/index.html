@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>在学习attention过程中一些专业名词 | Isaky&#39;s blog</title>
+        <meta name="author" content="Isaky" />
+        <meta name="description" content="welcome to my world!!" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/%5Bobject%20Object%5D" />
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.1.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存&ensp;浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <nav id="menu" ref="menu">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>ISAKY&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;ISAKY&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                <div class="article">
+    <div>
+        <h1>在学习attention过程中一些专业名词</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2022/5/20
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="color: #00a596">卷积层，过滤器</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/Augusdi/article/details/9020235?ops_request_misc=&request_id=&biz_id=102&utm_term=%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E4%B8%AD1%E5%92%8C-1%E8%8B%B1%E6%96%87&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-9020235.142^v10^pc_search_result_control_group,157^v4^control&spm=1018.2226.3001.4187" ><font color="red"><strong>首先保存一下各类常用英文词汇及解释</strong></font></a><br>ALSC:情感分类<br>**存档以后好看：ACL EMNLP **</p>
+<p>#CNN<br>图像、音频、文本处理（将数据转化为图像进行处理）<br>输入：二维像素阵列（图片）<br>通过<strong>CNN</strong>黑箱<br>输出：图片的意义<br>&amp;nbsp在输入过程如灰度图像，计算机接收到的是-1和1.（当两个图片有一定偏差时，计算机就能够通过识别图片的特征，而以下图为例<br><img src="/picture/hexo-Img/%E5%8D%B7%E7%A7%AF%E5%B1%82.png" alt=" "><br>三张图为x的不同形态，找到三张图的特征形成卷积核<br>##channel<br>&amp;nbsp;&amp;nbsp;对于输入层而言，channel代表图像的通道数量，当输入图像为RGB彩色图像，则channel &#x3D; 3；如果是灰度图像，则channel &#x3D; 1。<br>&amp;nbsp;&amp;nbsp;对于卷积核而言，卷积核的深度 &#x3D; 卷积核channel数<br>若当前卷积层的上一层为输入层，则channel数 &#x3D; 输入图像channel数无论输入图像的深度是多少，每经过一个卷积核都将变换为一个深度为1的特征图，一个卷积层之内可定义多个卷积核，当前卷积层上的各个卷积核会对上一层输入的每feature map（特征图）分别执行卷积操作，即每个卷积核都会对应生成一个新的特征图feature map(不同的卷积核所提取的特征不同)。故而在下一层需要多少个特征图，本层就需要定义多少个卷积核，即卷积核的深度与传出的特征图的张数一致。<br>##神经元、卷积和池化、softmax<br><strong>神经元</strong>：由一个线性函数和一个<u>非线性激活函数</u>（改变数据线性关系并将数据映射到某个范围内，防止过大溢出）构成.<br><strong>全连接</strong>：所有神经元都与下层神经元有关系。（缺点：计算量大）<br>*<em>填充（padding)*<em>：在卷积过程中，输入数据边缘不能利用到如（通过3</em>3的卷积核去进行卷积5*5的数据，输出结果为3</em>3），就用0去填充输入矩阵外轮廓（p&#x3D;k-1&#x2F;2). 填充完过后输出的矩阵就会变成和输入大小相同的矩阵（特征矩阵）。<br><strong>步长（Stride）</strong>：卷积过程中跳跃的距离，一般只移动一格但是不限。<br><strong>卷积</strong>：卷积核的生成方式一般是随机的或全为0又或者通过预训练的方式提取卷积核然后通过算法去纠正卷积核到底是什么。（假设输入图像为n<em>n,卷积核(过滤器）为f</em>f，填充p，步长s,则输出<font color="red"> <strong>O&#x3D;（n-f+2p)&#x2F;s+1</strong></font>)<br>在rgb图像中channel为3，可以通过多通道的过滤器（3<em>3</em>3）卷积完成后经过cnn输出与卷积过滤器（3<em>3</em>3）数量相同的过滤器（3<em>3</em>通道数）个数。<br><strong>池化</strong>：作用：降维。&amp;emsp;  1.最大池化：取当前卷积核中数字最大的一的数，形成新的卷积核。<br><strong>Dropout层</strong>:111<br><strong>softmax</strong>:<br><img src="https://img-blog.csdn.net/20180902220822202?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JpdGNhcm1hbmxlZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"><br>假设有一个数组V， V i V_i Vi​表示V中的第i个元素，那么这个元素的softmax值为:<br><code>S i = e i ∑ j e j S_i = \frac&#123;e^i&#125;&#123;\sum_j e^j&#125; Si​=∑j​ejei</code>​  </p>
+<p>该元素的softmax值，就是该元素的指数与所有元素指数和的比值。<br>##卷积层（kilter)和过滤器(filter)<br><a target="_blank" rel="noopener" href="https://medlen.blog.csdn.net/article/details/109906338">对于卷积层（kernel）和过滤器(filter)的区别</a>  </p>
+<pre><code>卷积核就是由长和宽来指定的，是一个二维的概念。
+而过滤器是是由长、宽和深度指定的，是一个三维的概念。
+过滤器可以看做是卷积核的集合。
+过滤器比卷积核高一个维度——深度。  
+</code></pre>
+<p>##RELU(激活函数)<br>函数公式:<font color=red size="20px"><code>f(x)=max(0,x)</code></font>;<br><code>def rectified(x)</code><br><code>return max(0.0,x);</code><br>优点：1)克服梯度消失的问题&amp;emsp;2)加快训练速度<br>缺点：1）输入负数，则完全不激活，ReLU函数死掉。&amp;emsp;12）ReLU函数输出要么是0，要么是正数，也就是ReLU函数不是以0为中心的函数<br>1.ReLU不是线性函数，为负时输出为0，为正时输出本身，而相对于tanh这些来说它的好处是能够返回一个真正意义的0而不是说近似的(所以有时也在于他相似于线性但是非线性，当神经网络的行为是线性或接近线性时，它更容易优化 )<br>2.对 MLPs，CNNs 使用 ReLU，但不是 RNNs，还有使用Tanh的LTSM都不适合使用<br>3.tanh 和 sigmoid 激活函数需要使用指数计算，而relu只用max()<br>#Residual(残差网络)<br> <font color="red"><strong><code>y=F(x,w)+x</code></strong></font><br> ResNet通过shortcut connections结构使得后面很多层能够直接学习残差，减少了很多信息的损耗和丢失：<br>通过将很多信息绕道传给输出，保护信息完整性，使得整个网络只需要学习输入和输出差别的那一部分。<br>##parameter-free<br>一种无监督聚类算法<br><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Sarfraz_Efficient_Parameter-Free_Clustering_Using_First_Neighbor_Relations_CVPR_2019_paper.pdf">Efficient Parameter-free Clustering Using First Neighbor Relations​arxiv.org </a>   </p>
+<p>–  </p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Isaky&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Isaky
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+
+
+
+
+        
+    </body>
+</html>
