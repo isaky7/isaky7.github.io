@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Isaky&#39;s blog</title>
+        <title>Tags: html | Isaky&#39;s blog</title>
         <meta name="author" content="Isaky" />
         <meta name="description" content="welcome to my world!!" />
         <meta name="keywords" content="" />
@@ -27,10 +27,6 @@
 
 
 <script src="/js/lib/preview.js"></script>
-
-
-
-
 
 
 
@@ -153,64 +149,148 @@
     </div>
 </nav>
 
-                <div class="article">
-    <div>
-        <h1></h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/3/17
+                <div id="archives">
+    
+    <div class="categories-tags">
+        
+        
+        <span>
+            <a href="/tags/Batch-Normalization/" style="background: #00a596">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                Batch-Normalization
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/Layer-Normalization/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                Layer-Normalization
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/Transformer/" style="background: #00a596">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                Transformer
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="background: #00a596">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                卷积层，过滤器
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="background: #ff7d73">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                学习笔记
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="background: #03a9f4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                机器学习
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/markdown/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                markdown
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/html/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                html
+            </a>
+        </span>
+        
+        
+        
+        
+        
+        <span>
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="background: #ff7d73">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                博客搭建，主题
+            </a>
         </span>
         
         
     </div>
     
-    <div class="content" v-pre>
-        <p>tags: [markdown,html,博客搭建，主题]  </p>
-<h1>关于博客的搭建</h1>   
-<h2>前言</h2> 
-之前为了学习人工智能方便做笔记，而云服务器对于抠搜党来说还是不怎么划算，于是比较简单的通过hexo+github做出了简单的搭建。由于时间和各种因素并没有去美化和完善他，已经过了半年了，想乘着博客的搭建复习以下`markdown`和`html`一些知识。<span id="more"></span>  
-<h2>主题更换</h2>  
-emmm....本来想自己搭建的，但是一环扣一环，我先选择现成的主题来使用，在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes|Hexo</a>中找到喜欢的主题打开github根据教程clone主题，或者将主题下载到本地hexo主题文件夹中进行使用。  
-  
-<h2>个性化制作</h2>  
-在hexo的`config`中，site处更改作者名和博客标题，头像设置在avatar处添加  
->(**空一格**）(图片相对路径)  
-
-<p>背景则是在background处如头像设置一致。<br>description修改类似于个性签名，为了格调更高，加上我的github链接（<s>虽然没啥东西</s>),在friendLinks中添加即可。<br>想更高级点用icon来替换链接，<br><strong>文章查询</strong>  </p>
-<ul>
-<li>将<code>config</code>7中的search改为true会实现文档标题查询。</li>
-</ul>
-<p><strong>文章置顶</strong></p>
-<ul>
-<li>在 <code>Front-Matter</code> 里设置 pinned 作为置顶参数，越大越靠前，默认为 0</li>
-</ul>
-<h3>js特效</h3>  
-无所谓，我会ctrlc+v.
-通过js添加流星背景，鼠标点击特性、鼠标指针特效。最后记住在layout.ejs的<head>中添加相应的js。  
-<h3>问题</h3>  
-1.发现markdown删除线语法前后加<font color="red">`~~`</font>没用，所以最后还是选择用前端的方法加`<s></s>`.  
-2.在部署完成后，使用   
->hexo clean  
-hexo g  
->hexo serve  //用于启动本地端口
-
-<p>发现在本地服务器local上正常运行，但在github域名上没有改变，我觉得应该是没有更新到github上，查询发现应该使用  </p>
-<blockquote>
-<p>hexo g<br>hexo d  </p>
-</blockquote>
-<p>部署成功，不过加载挺慢的，后续想增加bgm和live2d。<br>3.发现笔记全篇放出在主页没有缩略，发现是要在文档中加上<code>&lt;!-- more --&gt;</code></p>
-
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2023/3/17</div>
+            <a href="/2023/03/17/%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+                <h3>博客的设计</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/markdown/" style="color: #03a9f4">markdown</a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/html/" style="color: #ffa2c4">html</a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="color: #03a9f4">博客搭建，主题</a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
     </div>
-    
-    
-    
-    
-    
-    
     
 </div>
 
@@ -243,12 +323,6 @@ hexo g
             
         </div>
         <script src="/js/main.js"></script>
-        
-        
-
-
-
-
         
     </body>
 </html>

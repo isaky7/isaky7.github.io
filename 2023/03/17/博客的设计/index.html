@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>李宏毅学习笔记 | Isaky&#39;s blog</title>
+        <title>博客的设计 | Isaky&#39;s blog</title>
         <meta name="author" content="Isaky" />
         <meta name="description" content="welcome to my world!!" />
         <meta name="keywords" content="" />
@@ -155,14 +155,14 @@
 
                 <div class="article">
     <div>
-        <h1>李宏毅学习笔记</h1>
+        <h1>博客的设计</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2022/5/24
+            2023/3/17
         </span>
         
         
@@ -173,7 +173,17 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="color: #00a596">机器学习</a>
+                <a href="/tags/markdown/" style="color: #ff7d73">markdown</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/html/" style="color: #ff7d73">html</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="color: #ff7d73">博客搭建，主题</a>
             </span>
             
         </span>
@@ -181,10 +191,39 @@
     </div>
     
     <div class="content" v-pre>
-        <p>#第一讲(课程简介）<br>1.Pre-trained Model（Foundation Model)-&gt;Bert<br>2.Generative Adversarial Network:只用收集大量x和大量Y,不需要他们成对关系，机器自动把他们关联起来<br>3.Reinforcement Learning(RL):不知道怎么定义标签（标注资料）但知道什么是好坏时<br>4.Anomaly Detection(异常检测）：让机器具备回答不知道的指令<br>5.Explainable AI<br>6.Domain Adaptation<br>7.NetWork Compressionf   <span id="more"></span><br>##Function-机器学习<br>Regression:要找的函数的输出是一个数值这样的机器学习任务<br>Classification:让机器做选择题（要先准备好classes)<br>Structured Learning:让机器出结构<br><strong>找出函数的步骤</strong>：<br>1.写出一个带有未知参数的函数（待定系数）-&gt;这个function我们也可以叫做model（eg:y&#x3D;b+wx,b和w就是待定系数）<br>2.定义一个Loss(也是一个Function,输入的是前面待定的系数，输出的值是判断这个系数好与坏，（eg:输入（0.5k,1）-&gt;y&#x3D;0.5k+x）将式子带入过去的样本中，求出每次预测值与真实值之间的差（真实值叫做Label）,把所有误差相加取平均值&#x3D;L（LOSS），L越大输入的值就越不好)<br>(这种方法得到的L也叫做mean absolute error{MAE}，还可以通过标准差求得e叫做MSE)<br>3.Optimization(最优化问题):<br><font color="red">Gradient Descent</font>(eg:b一定时，w变化，L会取不同的值形成的wL坐标轴曲线就是error surface(误差曲面))：<br>&amp;emsp;1)随机决定一个W的初始值w<sub>0</sub><br>&amp;emsp;2)计算在w<sub></p>
+        <h1>关于博客的搭建</h1>   
+<h2>前言</h2> 
+之前为了学习人工智能方便做笔记，而云服务器对于抠搜党来说还是不怎么划算，于是比较简单的通过hexo+github做出了简单的搭建。由于时间和各种因素并没有去美化和完善他，已经过了半年了，想乘着博客的搭建复习以下`markdown`和`html`一些知识。<span id="more"></span>  
+<h2>主题更换</h2>  
+emmm....本来想自己搭建的，但是一环扣一环，我先选择现成的主题来使用，在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes|Hexo</a>中找到喜欢的主题打开github根据教程clone主题，或者将主题下载到本地hexo主题文件夹中进行使用。  
+  
+<h2>个性化制作</h2>  
+在hexo的`config`中，site处更改作者名和博客标题，头像设置在avatar处添加  
+>(**空一格**）(图片相对路径)  
+
+<p>背景则是在background处如头像设置一致。<br>description修改类似于个性签名，为了格调更高，加上我的github链接（<s>虽然没啥东西</s>),在friendLinks中添加即可。<br>想更高级点用icon来替换链接，<br><strong>文章查询</strong>  </p>
+<ul>
+<li>将<code>config</code>7中的search改为true会实现文档标题查询。</li>
+</ul>
+<p><strong>文章置顶</strong></p>
+<ul>
+<li>在 <code>Front-Matter</code> 里设置 pinned 作为置顶参数，越大越靠前，默认为 0</li>
+</ul>
+<h3>js特效</h3>  
+无所谓，我会ctrlc+v.
+通过js添加流星背景，鼠标点击特性、鼠标指针特效。最后记住在layout.ejs的<head>中添加相应的js。  
+<h3>问题</h3>  
+1.发现markdown删除线语法前后加<font color="red">`~~`</font>没用，所以最后还是选择用前端的方法加`<s></s>`.  
+2.在部署完成后，使用   
+>hexo clean  
+hexo g  
+>hexo serve  //用于启动本地端口
+
+<p>发现在本地服务器local上正常运行，但在github域名上没有改变，我觉得应该是没有更新到github上，查询发现应该使用  </p>
 <blockquote>
-<p>超参数：训练前就定好或者在训练中人为改变的值  </p>
+<p>hexo g<br>hexo d  </p>
 </blockquote>
+<p>部署成功，不过加载挺慢的，后续想增加bgm和live2d。<br>3.发现笔记全篇放出在主页没有缩略，发现是要在文档中加上<code>&lt;!-- more --&gt;</code><br>4.忘记了hexo创建的方法了，应该使用<code>hexo new &lt;title&gt;</code></p>
 
     </div>
     
