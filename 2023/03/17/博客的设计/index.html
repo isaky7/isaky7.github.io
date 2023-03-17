@@ -173,17 +173,17 @@
             
             <span class="tag">
                 
-                <a href="/tags/markdown/" style="color: #ff7d73">markdown</a>
+                <a href="/tags/markdown/" style="color: #03a9f4">markdown</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/html/" style="color: #ff7d73">html</a>
+                <a href="/tags/html/" style="color: #00bcd4">html</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="color: #ff7d73">博客搭建，主题</a>
+                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="color: #03a9f4">博客搭建，主题</a>
             </span>
             
         </span>
@@ -191,8 +191,7 @@
     </div>
     
     <div class="content" v-pre>
-        <h1>关于博客的搭建</h1>   
-<h2>前言</h2> 
+        <h2>前言</h2> 
 之前为了学习人工智能方便做笔记，而云服务器对于抠搜党来说还是不怎么划算，于是比较简单的通过hexo+github做出了简单的搭建。由于时间和各种因素并没有去美化和完善他，已经过了半年了，想乘着博客的搭建复习以下`markdown`和`html`一些知识。<span id="more"></span>  
 <h2>主题更换</h2>  
 emmm....本来想自己搭建的，但是一环扣一环，我先选择现成的主题来使用，在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes|Hexo</a>中找到喜欢的主题打开github根据教程clone主题，或者将主题下载到本地hexo主题文件夹中进行使用。  
@@ -201,7 +200,7 @@ emmm....本来想自己搭建的，但是一环扣一环，我先选择现成的
 在hexo的`config`中，site处更改作者名和博客标题，头像设置在avatar处添加  
 >(**空一格**）(图片相对路径)  
 
-<p>背景则是在background处如头像设置一致。<br>description修改类似于个性签名，为了格调更高，加上我的github链接（<s>虽然没啥东西</s>),在friendLinks中添加即可。<br>想更高级点用icon来替换链接，<br><strong>文章查询</strong>  </p>
+<p>背景则是在background处如头像设置一致。<br>description修改类似于个性签名，为了格调更高，加上我的github链接（<s>虽然没啥东西</s>),在friendLinks中添加即可。<br>想更高级点用icon来替换链接，<br>通过脚本在主页底部显示访客量，将脚本添加在<code>fooder.ejs</code>中。<br><strong>文章查询</strong>  </p>
 <ul>
 <li>将<code>config</code>7中的search改为true会实现文档标题查询。</li>
 </ul>
@@ -223,7 +222,7 @@ hexo g
 <blockquote>
 <p>hexo g<br>hexo d  </p>
 </blockquote>
-<p>部署成功，不过加载挺慢的，后续想增加bgm和live2d。<br>3.发现笔记全篇放出在主页没有缩略，发现是要在文档中加上<code>&lt;!-- more --&gt;</code><br>4.忘记了hexo创建的方法了，应该使用<code>hexo new &lt;title&gt;</code></p>
+<p>部署成功，不过加载挺慢的，后续想增加bgm和live2d。<br>3.发现笔记全篇放出在主页没有缩略，发现是要在文档中加上<code>&lt;!-- more --&gt;</code><br>4.忘记了hexo创建的方法了，应该使用<code>hexo new &quot;title&quot;</code></p>
 
     </div>
     
@@ -236,6 +235,11 @@ hexo g
 </div>
 
                 <footer id="footer">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人</span>
     <div id="footer-wrap">
         <div>
             &copy;
