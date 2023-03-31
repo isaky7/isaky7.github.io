@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Tags: CNND，ProGan | Isaky&#39;s blog</title>
+        <title>语音克隆 | Isaky&#39;s blog</title>
         <meta name="author" content="Isaky" />
         <meta name="description" content="welcome to my world!!" />
         <meta name="keywords" content="" />
@@ -27,6 +27,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -149,149 +153,44 @@
     </div>
 </nav>
 
-                <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        <span>
-            <a href="/tags/Batch-Normalization/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Batch-Normalization
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Layer-Normalization/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Layer-Normalization
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Transformer/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Transformer
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/CNND%EF%BC%8CProGan/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                CNND，ProGan
-            </a>
-        </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                学习笔记
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/markdown/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                markdown
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/html/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                html
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                博客搭建，主题
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                卷积层，过滤器
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                机器学习
-            </a>
+                <div class="article">
+    <div>
+        <h1>语音克隆</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/30
         </span>
         
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/3/20</div>
-            <a href="/2023/03/20/%E5%85%B3%E4%BA%8ECNND%E9%A1%B9%E7%9B%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%AD%A6%E4%B9%A0/">
-                <h3>关于CNND项目过程中的学习</h3>
-            </a>
-            <div class="info">
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/CNND%EF%BC%8CProGan/" style="color: #00a596">CNND，ProGan</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <h1>前言</h1>  
+本次开发是针对互联网+项目虚拟人的语音克隆板块，内容参照开源项目<a target="_blank" rel="noopener" href="https://gitcode.net/mirrors/CorentinJ/Real-Time-Voice-Cloning">`Real-Time-Voice-Cloning`</a>  
+论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1806.04558.pdf">《Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis》</a>  
+<font color="red">发现可接受中文普通话输入，在此模型基础上进行改进的MockingBird </font>
+<span id="more"></span>  
+<h1>正文</h1>  
+语音克隆总共通过三个模型组成：`encoder`、`Synthesizer`、`Vocoder`  
+Encoder模型:对扬声器输入语音进行处理  
+Synthesizer模型:根据说话人嵌入向量的条件从一连串字母或音符输入中预测出一个`mel spectrogram`  
+Vocoder模型：将合成器合成的谱图转化为时域波形  
+而相较于RTVC来说MB增加了`ppg2mel`模型即--`mel-spectrogram预测网络`  
+训练数据集：无记录的嘈杂噪音数据集  
+<h3>训练</h3>  
+本次使用的是预训练编码器/声码器而不是合成器，因为原始模型与中文符号不兼容。这意味着 demo_cli 目前不工作，因此需要额外的合成器模型。而在原始项目中，存在与训练好的编码器、合成器、生码器。  
+
     </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -329,6 +228,12 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>

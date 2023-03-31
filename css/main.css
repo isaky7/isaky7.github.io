@@ -331,7 +331,7 @@
 }
 #loading {
     align-items: center;
-    background: #fff;
+    background-image:url("source\images\bk4.jpg");
     display: flex;
     flex-direction: column;
     height: 100vh;

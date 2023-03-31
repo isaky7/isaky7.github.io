@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Tags: CNND，ProGan | Isaky&#39;s blog</title>
+        <title>deepfm学习 | Isaky&#39;s blog</title>
         <meta name="author" content="Isaky" />
         <meta name="description" content="welcome to my world!!" />
         <meta name="keywords" content="" />
@@ -27,6 +27,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -149,149 +153,42 @@
     </div>
 </nav>
 
-                <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        <span>
-            <a href="/tags/Batch-Normalization/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Batch-Normalization
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Layer-Normalization/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Layer-Normalization
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Transformer/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Transformer
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/CNND%EF%BC%8CProGan/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                CNND，ProGan
-            </a>
-        </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                学习笔记
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/markdown/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                markdown
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/html/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                html
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                博客搭建，主题
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                卷积层，过滤器
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                机器学习
-            </a>
+                <div class="article">
+    <div>
+        <h1>deepfm学习</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/21
         </span>
         
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2023/3/20</div>
-            <a href="/2023/03/20/%E5%85%B3%E4%BA%8ECNND%E9%A1%B9%E7%9B%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%AD%A6%E4%B9%A0/">
-                <h3>关于CNND项目过程中的学习</h3>
-            </a>
-            <div class="info">
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/CNND%EF%BC%8CProGan/" style="color: #00a596">CNND，ProGan</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>DeepFM是一种结合了深度学习和因子分解机（Factorization Machine，简称FM）的推荐系统算法。它在FM的基础上引入了神经网络结构，旨在提高模型的表达能力和泛化能力。下面逐步讲解DeepFM的算法实现。</p>
+<p>模型架构<br>DeepFM的整体架构如下图所示：</p>
+<p>DeepFM Architecture</p>
+<p>可以看到，DeepFM由两个部分组成，一部分是FM部分，另一部分是深度神经网络部分。FM部分主要用于学习低阶特征的交叉信息，而深度神经网络部分主要用于学习高阶特征的交叉信息。整个模型的输出由FM部分和深度神经网络部分的输出相加得到。</p>
+<p>模型输入<br>DeepFM的模型输入可以包括稠密特征和稀疏特征，其中稠密特征指的是连续型特征，例如用户的年龄、商品的价格等，而稀疏特征指的是离散型特征，例如用户ID、商品ID等。稠密特征可以直接输入到深度神经网络部分中，而稀疏特征需要进行embedding操作后再输入。</p>
+<p>FM部分<br>FM部分主要用于学习低阶特征的交叉信息，其原理可以参考FM模型的讲解。在DeepFM中，FM部分的计算公式如下：</p>
+<p>$$y_{FM}(x) &#x3D; \sum_{i&#x3D;1}^{n} \sum_{j&#x3D;i+1}^{n} \langle v_i, v_j \rangle x_i x_j$$</p>
+<p>其中，$x_i$和$x_j$表示输入的稀疏特征的embedding向量，$v_i$和$v_j$表示对应的隐向量，$\langle \cdot,\cdot \rangle$表示向量内积。</p>
+<p>深度神经网络部分<br>深度神经网络部分主要用于学习高阶特征的交叉信息，其原理可以参考深度学习模型的讲解。在DeepFM中，深度神经网络部分的计算公式如下：</p>
+<p>$$y_{DNN}(x) &#x3D; h(\textbf{W}l\sigma(\textbf{W}{l-1}…\sigma(\textbf{W}_1\textbf{x})))$$</p>
+<p>其中，$\textbf{x}$表示输入的稠密特征，$\textbf{W}_i$表示第$i$层的权重矩阵，$\sigma(\cdot)$表示激活函数，$h(\cdot)$表示输出层的激活函数。</p>
+<p>整体模型输出<br>整个模型的输出由FM部分</p>
+
     </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -329,6 +226,12 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>
