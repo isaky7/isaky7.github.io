@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Tags: 卷积层，过滤器 | Isaky&#39;s blog</title>
+        <title>人脸识别学习(一) | Isaky&#39;s blog</title>
         <meta name="author" content="Isaky" />
         <meta name="description" content="welcome to my world!!" />
         <meta name="keywords" content="" />
@@ -27,6 +27,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -149,149 +153,51 @@
     </div>
 </nav>
 
-                <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        <span>
-            <a href="/tags/Batch-Normalization/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Batch-Normalization
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Layer-Normalization/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Layer-Normalization
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Transformer/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                Transformer
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/CNND%EF%BC%8CProGan/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                CNND，ProGan
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/markdown/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                markdown
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/html/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                html
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E4%B8%BB%E9%A2%98/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                博客搭建，主题
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                学习笔记
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                卷积层，过滤器
-            </a>
-        </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                机器学习
-            </a>
+                <div class="article">
+    <div>
+        <h1>人脸识别学习(一)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/22
         </span>
         
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/5/20</div>
-            <a href="/2022/05/20/%E5%9C%A8%E5%AD%A6%E4%B9%A0attention%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%B8%80%E4%BA%9B%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/">
-                <h3>在学习attention过程中一些专业名词</h3>
-            </a>
-            <div class="info">
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8C%E8%BF%87%E6%BB%A4%E5%99%A8/" style="color: #00a596">卷积层，过滤器</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>本次学习是AidLux实训跟练记录，主要是人脸识别原理及Retinaface实战。<span id="more"></span>  </p>
+<h1>正文</h1>  
+<h2>关键技术</h2>    
+1.人脸识别->人脸关键点检测；  
+Retinaface->五点关键点检测  
+2.人脸追踪->依赖检测框追踪->追踪算法(TBD,DeepSort)  
+3.人脸图像预处理->人脸过滤，人脸矫正->特征提取   
+4.人脸特征提取+比对->人脸建模->人脸库  
+<h2>本次学习</h2>  
+<h3>Retinaface</h3>  
+1.人工标注  
+2.特征金字塔网络FPN  
+3.多任务学习设置多任务loss参数  
+<h3>数据集</h3>  
+0：人脸可见  
+1：人脸模糊可见  
+-1:人脸检测不出（模糊）  
+<font color="red">ps:突然知道上次cnnd的eval是怎么回事了，把`eval_config`改变模型路径，用`python eval.py`就可以和原模型对比了</font>  
+<h2>问题</h2>  
+<h3>问题一</h3>  
+页面文件太小，无法解决/BrokenPipeError: [Errno 32] Broken pipe.  
+这问题还是比较好解决的，把线程`num_workers`改为0即可
     </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -329,6 +235,12 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>

@@ -183,6 +183,29 @@ Vocoder模型：将合成器合成的谱图转化为时域波形
 训练数据集：无记录的嘈杂噪音数据集  
 <h3>训练</h3>  
 本次使用的是预训练编码器/声码器而不是合成器，因为原始模型与中文符号不兼容。这意味着 demo_cli 目前不工作，因此需要额外的合成器模型。而在原始项目中，存在与训练好的编码器、合成器、生码器。  
+想自己在原作者的模型上进行训练，结果直接崩溃了，在`synthesizer/haprams.py`中改`batch_size`:  
+>tts_schedule = [(2, 1e-3, 20_000, 8), # Progressive training schedule  
+(2, 5e-4, 40_000, 8), # (r, lr, step, batch_size)  
+(2, 2e-4, 80_000, 8), #  
+(2, 1e-4, 160_000, 8), # r = reduction factor (# of mel frames  
+(2, 3e-5, 320_000, 8), # synthesized for each decoder iteration)  
+(2, 1e-5, 640_000, 8)], # lr = learning rate    
+ 
+<h3>问题一</h3>  
+<font color="orange">好家伙MK里面的路径要改，发现缺东西，结果意外发现缺的在RTVC那里有</font>  
+在`demo_cli.py`修改预训练模型地址和音频地址，注意文件地址斜杠用**`/`**  
+pip下载太慢了，之前是配置好镜像源的，弄torch报错就删了，让我们感谢`-i https://pypi.tuna.tsinghua.edu.cn/simple gevent`  
+<h3>问题二</h3>  
+在运行过程中，总是出现下面报错：  
+
+<blockquote>
+<p>Caught exception: ValueError(‘The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()’)  </p>
+</blockquote>
+<p>但是不知道问题在哪儿，使用<code>traceback</code>:  </p>
+<blockquote>
+<p>import traceback<br>try:<br>    # Your code that raises the exception<br>except Exception as e:<br>    traceback.print_exc()  </p>
+</blockquote>
+<hr>
 
     </div>
     
