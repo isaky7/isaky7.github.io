@@ -196,6 +196,7 @@
 使用`--ref_pose`,太拉速度了
 
 <p>改代码了：在<code>./src/utils/animate.py</code>因为我只需要全身图，而代码中不管是添加眼睛动作还是增加enhances他都会多生成视频，并且即使不使用也会生成一个裁剪视频一个原图视频。<br>还是不行，他有些需要裁剪的图像和视频才行。我只减少了他的输出<br>模型加载：22秒<br>共：5分31提了一丢丢</p>
+<p>改进：<br>在get_rotation_matrix函数中，使用tensor的矩阵乘法torch.matmul()函数替换torch.einsum()函数，简化计算具有更高的效率。<br>&lt;font color”red”&gt;此方法不行，因为输入是四张量，而matmul和bmm接受二张量的。<br>在colab上每次都要重新配置加载，发现模型在初次加载时耗时更长。跑第二次，<code>batch_size</code>使用的18（免费的快超了）<br>共用时：4分46秒<br>第三次生成，用时3分43<br>加了眼睛和pose感觉很奇怪，而且会出现明显的分层，都设置为none吧。</p>
 
     </div>
     

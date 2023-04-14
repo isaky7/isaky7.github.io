@@ -191,6 +191,9 @@ Vocoder模型：将合成器合成的谱图转化为时域波形
 (2, 3e-5, 320_000, 8), # synthesized for each decoder iteration)  
 (2, 1e-5, 640_000, 8)], # lr = learning rate    
  
+<hr>
+<p><font color=red><h3>更新</h3><br>预期使用的mockingbird只能在ui界面，demo总有问题，换成了paddlespeech，发现运行挺快，微调数据量也小。<br>在小数据量微调模型过程中，使用6句共18秒的通过处理的目标人物音频，逐次递增100步观察模型合成音频效果，训练两百步时的模型合成声音已经与目标声音很接近了，loss值在0.438左右；500步时loss值达到0.340412，但是发现虽然loss值在不断减少，但是音频合成质量反而有所下降并且出现了电音。<br>我要串起来了！！<br></font>  </p>
+<hr>
 <h3>问题一</h3>  
 <font color="orange">好家伙MK里面的路径要改，发现缺东西，结果意外发现缺的在RTVC那里有</font>  
 在`demo_cli.py`修改预训练模型地址和音频地址，注意文件地址斜杠用**`/`**  
